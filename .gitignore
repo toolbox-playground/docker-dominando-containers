@@ -1,0 +1,49 @@
+# Arquivos de Docker
+*.tar
+*.img
+*.container
+
+# Docker Compose override files
+docker-compose.override.yml
+
+# Logs do Docker
+docker-logs/
+*.log
+
+# Volumes e dados persistentes (caso estejam no repositório local)
+volumes/
+data/
+tmp/
+*.pid
+
+# Build artifacts do Docker
+**/docker-build/
+**/build/
+
+# Arquivos temporários e cache
+*.tmp
+*.swp
+*.swo
+.cache/
+.env
+.env.*
+!.env.example  # mantém um exemplo de .env
+
+# Diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Node.js (se for usado)
+node_modules/
+
+# Python (se for usado)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Outros
+.idea/
+.vscode/
