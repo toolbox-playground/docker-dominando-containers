@@ -1,8 +1,8 @@
 ![Docker](imgs/logo_curso.jpg "Docker - Dominando Containers")
 
-# Terraform - Docker - Dominando Containers"
+# Docker - Dominando Containers"
 
-Bem-vindo ao repositório oficial do curso de **Docker - Dominando Containers"**, onde transformamos o aprendizado em prática real!  
+Bem-vindo ao repositório oficial do curso de **Docker - Dominando Containers**, onde transformamos o aprendizado em prática real!  
 
 # Nosso objetivo
 Este treinamento intensivo, com cerca de 6 horas divididas em 3 encontros ao vivo, foi projetado para que você domine o Docker, uma das ferramentas mais poderosas e indispensáveis para infraestrutura de TI. Nossa missão é garantir que até mesmo iniciantes absolutos possam adquirir conhecimento e praticar o uso de Docker de forma confiante e eficaz.
