@@ -128,3 +128,31 @@ volumes:
 
 # Rodando o projeto
 
+1. Subindo o projeto
+
+```docker compose up -d --build```
+
+2. Ver containers
+
+```docker ps```
+
+3. Testar aplicação
+
+Abra no navegador:
+
+```http://localhost:3000```
+
+# Teste importante: 
+
+1. Derrubando o container: 
+
+```docker compose down```
+
+2. Subir novamente
+
+```docker compose up -d```
+
+# O que fica entendido:
+
+- Os dados continuam existindo, porque usamos o volume
+- Docker Compose gerencia tudo automaticamente
