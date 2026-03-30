@@ -36,5 +36,57 @@ docker run -d \
   --name servidor-web \
   --network minha-rede \
   nginx
-  
+
 ```
+3. Subir um container cliente (temporário)
+```
+docker run -it --rm \
+  --network minha-rede \
+  curlimages/curl \
+  sh
+```
+4. Testar a comunicação
+```curl http://servidor-web```
+
+# Resultado esperado
+
+Você deve ver o HTML padrão do Nginx.
+
+Isso acontece porque:
+O Docker resolve automaticamente o nome servidor-web
+Não precisamos usar IP
+
+# Parte de investigação do exercício:
+
+1. Descobrir o IP do container
+```docker inspect servidor-web```
+
+2. Procurar por:
+
+```IPAddress```
+
+# Testar acesso via IP
+
+1. No container cliente:
+
+```curl http://172.21.0.2```
+
+Testei o acesso via IP e não funcionou porque o IP do container pertence a uma rede interna do Docker.
+Essa rede é isolada, permitindo comunicação apenas entre containers que estão conectados a ela.
+Como o teste foi feito a partir da máquina host (meu Mac), não foi possível acessar diretamente esse IP.
+
+2.  Listar redes
+
+```docker network ls```
+
+3. Inspecionar a rede criada
+
+```docker network inspect minha-rede```
+
+# Teste de erro 
+
+1. Peça para rodarem um container fora da rede:
+
+```docker run -it --rm curlimages/curl sh```
+
+Não houve resposta, pois o container está fora da rede. 
